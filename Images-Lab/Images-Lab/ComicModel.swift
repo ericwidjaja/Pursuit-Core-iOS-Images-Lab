@@ -14,6 +14,13 @@ struct XKCDComic: Codable {
     let img: String
     let title: String
     
+    init () {
+        self.num = Int()
+        self.img = String()
+        self.title = String()
+        
+    }
+    
     static func getComic(completionHandler: @escaping (Result<[XKCDComic],AppError>) -> () ) {
         let url = "http://xkcd.com/info.0.json"
         
